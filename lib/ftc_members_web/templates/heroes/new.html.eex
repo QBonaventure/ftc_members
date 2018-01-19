@@ -1,0 +1,5 @@
+<h2>New Heroes</h2>
+
+<%= render "form.html", Map.put(assigns, :action, heroes_path(@conn, :create)) %>
+
+<span><%= link "Back", to: heroes_path(@conn, :index) %></span>

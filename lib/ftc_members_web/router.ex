@@ -17,6 +17,8 @@ defmodule FtcMembersWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/members", MemberController
+    resources "/heroes", HeroesController
   end
 
   # Other scopes may use custom stacks.

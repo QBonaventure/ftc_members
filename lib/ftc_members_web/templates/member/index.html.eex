@@ -1,0 +1,28 @@
+<h2>Listing Members</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Bnet</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for member <- @members do %>
+    <tr>
+      <td><%= member.username %></td>
+      <td><%= member.bnet_id %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: member_path(@conn, :show, member), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: member_path(@conn, :edit, member), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: member_path(@conn, :delete, member), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Member", to: member_path(@conn, :new) %></span>

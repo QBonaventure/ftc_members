@@ -51,8 +51,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :ftc_members, FtcMembers.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "ftc_members",
+  password: "password",
   database: "ftc_members_dev",
   hostname: "localhost",
   pool_size: 10

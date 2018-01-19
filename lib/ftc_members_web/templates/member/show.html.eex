@@ -1,0 +1,18 @@
+<h2>Show Member</h2>
+
+<ul>
+
+  <li>
+    <strong>Username:</strong>
+    <%= @member.username %>
+  </li>
+
+  <li>
+    <strong>Bnet:</strong>
+    <%= @member.bnet_id %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: member_path(@conn, :edit, @member) %></span>
+<span><%= link "Back", to: member_path(@conn, :index) %></span>

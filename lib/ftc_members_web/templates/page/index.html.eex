@@ -20,6 +20,15 @@
   </div>
 
   <div class="col-lg-6">
+    <h4>Modifier le site</h4>
+    <ul>
+    </li>
+        <%= link "Members", to: member_path(@conn, :index), class: "btn btn-default btn-xs" %>
+            <%= link "Members", to: heroes_path(@conn, :index), class: "btn btn-default btn-xs" %>
+      </li>
+    </ul>
+
+
     <h4>Help</h4>
     <ul>
       <li>
